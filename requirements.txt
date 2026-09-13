@@ -4,6 +4,6 @@ numpy
 geopandas
 shapely
 pyproj
-fiona
+pyogrio
 rasterio
 matplotlib
