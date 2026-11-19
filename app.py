@@ -16,7 +16,12 @@ st.set_page_config(
 )
 st.logo("data/logo_v3.png")
 
-st.title("Ecological Niche Modeling – Amazon")
+col_logo, col_title = st.columns([1, 8], vertical_alignment="center")
+with col_logo:
+    st.image("data/logo_v3.png", width=110)
+with col_title:
+    st.title("Ecological Niche Modeling – Amazon")
+    
 st.markdown(
     """
     Interactive visualization of occurrence data and ecological niche models
