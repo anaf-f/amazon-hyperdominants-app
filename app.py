@@ -9,16 +9,21 @@ from matplotlib.colors import ListedColormap
 from matplotlib.patches import Patch
 import matplotlib.patheffects as pe
 import pandas as pd
+import base64
 
 st.set_page_config(
     page_title="Ecological Niche Modeling – Amazon",
     layout="wide"
 )
 
+def img_html(path, mime, width):
+    with open(path, "rb") as f:
+        b64 = base64.b64encode(f.read()).decode()
+    return f'<img src="data:{mime};base64,{b64}" width="{width}">'
 
 col_logo, col_title = st.columns([1, 8], vertical_alignment="center")
 with col_logo:
-    st.image("data/logo_v3.png", width=110, output_format="PNG")
+    st.markdown(img_html("data/logo_v3.svg", "image/svg+xml", 120), unsafe_allow_html=True)
 with col_title:
     st.title("Ecological Niche Modeling – Amazon")
     
