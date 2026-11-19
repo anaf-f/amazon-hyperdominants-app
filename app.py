@@ -14,6 +14,7 @@ st.set_page_config(
     page_title="Ecological Niche Modeling – Amazon",
     layout="wide"
 )
+st.logo("data/logo_v3.png")
 
 st.title("Ecological Niche Modeling – Amazon")
 st.markdown(
