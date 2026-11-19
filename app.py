@@ -14,11 +14,11 @@ st.set_page_config(
     page_title="Ecological Niche Modeling – Amazon",
     layout="wide"
 )
-st.logo("data/logo_v3.png")
+
 
 col_logo, col_title = st.columns([1, 8], vertical_alignment="center")
 with col_logo:
-    st.image("data/logo_v3.png", width=110)
+    st.image("data/logo_v3.png", width=110, output_format="PNG")
 with col_title:
     st.title("Ecological Niche Modeling – Amazon")
     
